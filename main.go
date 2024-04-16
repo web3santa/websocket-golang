@@ -15,10 +15,11 @@ func serverIndex(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "not found", http.StatusNotFound)
 		return
 	}
-	http.ServeFile(w, r, "templates/index.html")
+	http.ServeFile(w, r, "/usr/share/nginx/html/index.html")
 }
 
 func main() {
+
 	hub := NewHub()
 
 	go hub.Run()

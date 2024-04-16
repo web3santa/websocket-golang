@@ -69,7 +69,7 @@ func (h *Hub) Run() {
 }
 
 func getMessageTemplate(msg *Message) []byte {
-	tmpl, err := template.ParseFiles("templates/message.html")
+	tmpl, err := template.ParseFiles("/usr/share/nginx/html/message.html")
 	if err != nil {
 		log.Fatalf("template parsing %s", err)
 	}
